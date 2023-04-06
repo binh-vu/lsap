@@ -1,10 +1,11 @@
 [package]
 name = "lsap"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 description = "Solving linear sum assignment problem using JV algorithm as in Scipy"
 repository = "https://github.com/binh-vu/lsap/"
 license-file = "LICENSE"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
