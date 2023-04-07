@@ -12,3 +12,6 @@ license = "MIT"
 [dev-dependencies]
 approx = "0.5.1"
 ndarray = "0.15.6"
+
+[dependencies]
+derive_more = "0.99.17"

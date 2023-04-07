@@ -1,19 +1,21 @@
-#[derive(Debug)]
+use derive_more::{Display, Error};
+
+#[derive(Debug, Display, Error)]
 pub enum LSAPError {
     Invalid,
     Infeasible,
 }
 
-impl std::fmt::Display for LSAPError {
-    // This trait requires `fmt` with this exact signature.
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        // Write strictly the first element into the supplied output
-        // stream: `f`. Returns `fmt::Result` which indicates whether the
-        // operation succeeded or failed. Note that `write!` uses syntax which
-        // is very similar to `println!`.
-        write!(f, "{:?}", self)
-    }
-}
+// impl std::fmt::Display for LSAPError {
+//     // This trait requires `fmt` with this exact signature.
+//     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+//         // Write strictly the first element into the supplied output
+//         // stream: `f`. Returns `fmt::Result` which indicates whether the
+//         // operation succeeded or failed. Note that `write!` uses syntax which
+//         // is very similar to `println!`.
+//         write!(f, "{:?}", self)
+//     }
+// }
 
 pub fn get_assigned_cost(
     nr: usize,
